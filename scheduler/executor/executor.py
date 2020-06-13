@@ -1,6 +1,7 @@
 import subprocess
 
 class Executor:
-    def launch(self, path):
-        subprocess.Popen(path)
+    def launch(self, path, args):
+        process = subprocess.Popen([path, args], shell=True, stdout=subprocess.PIPE)
+        process.wait()
         

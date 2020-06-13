@@ -13,8 +13,8 @@ class TestExecutor(TestCase):
 
     def test_launch(self):
         print('test launch exe')
-        # executor = Executor()
-        # executor.launch('notepad.exe')
+        executor = Executor()
+        executor.launch('notepad.exe', 'new.txt')
         self.assertEqual(1, 1)
 
 if __name__ == '__main__':
